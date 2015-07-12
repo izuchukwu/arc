@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86228F7A1B51EC1B00548FE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F791B51EC1B00548FE2 /* main.m */; };
+		86228F821B5211E000548FE2 /* ACConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F811B5211E000548FE2 /* ACConsole.m */; };
+		86228F851B52149D00548FE2 /* ACConsoleInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F841B52149D00548FE2 /* ACConsoleInterface.m */; };
+		86228F881B52155700548FE2 /* ACConsoleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F871B52155700548FE2 /* ACConsoleData.m */; };
+		86228F8B1B521E4800548FE2 /* ACInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F8A1B521E4800548FE2 /* ACInterface.m */; };
+		86228F8F1B521F4C00548FE2 /* ACArc.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F8E1B521F4C00548FE2 /* ACArc.m */; };
+		86228F921B52214B00548FE2 /* ACMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F911B52214B00548FE2 /* ACMap.m */; };
+		86228F951B52232300548FE2 /* ACArcDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F941B52232300548FE2 /* ACArcDelta.m */; };
+		86228F981B5224D300548FE2 /* ACMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F971B5224D300548FE2 /* ACMapNode.m */; };
+		86228F9D1B52282700548FE2 /* ACMapNodeComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228F9C1B52282700548FE2 /* ACMapNodeComponent.m */; };
+		86228FA11B52350900548FE2 /* ACState.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FA01B52350900548FE2 /* ACState.m */; };
+		86228FB81B52434C00548FE2 /* ACMapNodeGrasslands.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FB71B52434C00548FE2 /* ACMapNodeGrasslands.m */; };
+		86228FBB1B52442600548FE2 /* ACMapNodeForest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FBA1B52442600548FE2 /* ACMapNodeForest.m */; };
+		86228FBE1B52AB8500548FE2 /* ACMapNodeRiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FBD1B52AB8500548FE2 /* ACMapNodeRiver.m */; };
+		86228FC11B52B26C00548FE2 /* ACMapNodeMountain.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FC01B52B26C00548FE2 /* ACMapNodeMountain.m */; };
+		86228FC41B52F6AA00548FE2 /* ACMapLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 86228FC31B52F6AA00548FE2 /* ACMapLine.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		86228F741B51EC1B00548FE2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		86228F761B51EC1B00548FE2 /* Arc Core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Arc Core"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86228F791B51EC1B00548FE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86228F801B5211E000548FE2 /* ACConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConsole.h; sourceTree = "<group>"; };
+		86228F811B5211E000548FE2 /* ACConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConsole.m; sourceTree = "<group>"; };
+		86228F831B52149D00548FE2 /* ACConsoleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConsoleInterface.h; sourceTree = "<group>"; };
+		86228F841B52149D00548FE2 /* ACConsoleInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConsoleInterface.m; sourceTree = "<group>"; };
+		86228F861B52155700548FE2 /* ACConsoleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConsoleData.h; sourceTree = "<group>"; };
+		86228F871B52155700548FE2 /* ACConsoleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConsoleData.m; sourceTree = "<group>"; };
+		86228F891B521E4800548FE2 /* ACInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACInterface.h; path = "Arc Core/ACInterface.h"; sourceTree = "<group>"; };
+		86228F8A1B521E4800548FE2 /* ACInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACInterface.m; path = "Arc Core/ACInterface.m"; sourceTree = "<group>"; };
+		86228F8D1B521F4C00548FE2 /* ACArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACArc.h; path = "Arc Core/ACArc.h"; sourceTree = "<group>"; };
+		86228F8E1B521F4C00548FE2 /* ACArc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACArc.m; path = "Arc Core/ACArc.m"; sourceTree = "<group>"; };
+		86228F901B52214B00548FE2 /* ACMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMap.h; path = "Arc Core/ACMap.h"; sourceTree = "<group>"; };
+		86228F911B52214B00548FE2 /* ACMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMap.m; path = "Arc Core/ACMap.m"; sourceTree = "<group>"; };
+		86228F931B52232300548FE2 /* ACArcDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACArcDelta.h; path = "Arc Core/ACArcDelta.h"; sourceTree = "<group>"; };
+		86228F941B52232300548FE2 /* ACArcDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACArcDelta.m; path = "Arc Core/ACArcDelta.m"; sourceTree = "<group>"; };
+		86228F961B5224D300548FE2 /* ACMapNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNode.h; path = "Arc Core/ACMapNode.h"; sourceTree = "<group>"; };
+		86228F971B5224D300548FE2 /* ACMapNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNode.m; path = "Arc Core/ACMapNode.m"; sourceTree = "<group>"; };
+		86228F9B1B52282700548FE2 /* ACMapNodeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNodeComponent.h; path = "Arc Core/ACMapNodeComponent.h"; sourceTree = "<group>"; };
+		86228F9C1B52282700548FE2 /* ACMapNodeComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNodeComponent.m; path = "Arc Core/ACMapNodeComponent.m"; sourceTree = "<group>"; };
+		86228F9F1B52350900548FE2 /* ACState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACState.h; path = "Arc Core/ACState.h"; sourceTree = "<group>"; };
+		86228FA01B52350900548FE2 /* ACState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACState.m; path = "Arc Core/ACState.m"; sourceTree = "<group>"; };
+		86228FB61B52434C00548FE2 /* ACMapNodeGrasslands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNodeGrasslands.h; path = "Arc Core/ACMapNodeGrasslands.h"; sourceTree = "<group>"; };
+		86228FB71B52434C00548FE2 /* ACMapNodeGrasslands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNodeGrasslands.m; path = "Arc Core/ACMapNodeGrasslands.m"; sourceTree = "<group>"; };
+		86228FB91B52442600548FE2 /* ACMapNodeForest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNodeForest.h; path = "Arc Core/ACMapNodeForest.h"; sourceTree = "<group>"; };
+		86228FBA1B52442600548FE2 /* ACMapNodeForest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNodeForest.m; path = "Arc Core/ACMapNodeForest.m"; sourceTree = "<group>"; };
+		86228FBC1B52AB8500548FE2 /* ACMapNodeRiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNodeRiver.h; path = "Arc Core/ACMapNodeRiver.h"; sourceTree = "<group>"; };
+		86228FBD1B52AB8500548FE2 /* ACMapNodeRiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNodeRiver.m; path = "Arc Core/ACMapNodeRiver.m"; sourceTree = "<group>"; };
+		86228FBF1B52B26C00548FE2 /* ACMapNodeMountain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapNodeMountain.h; path = "Arc Core/ACMapNodeMountain.h"; sourceTree = "<group>"; };
+		86228FC01B52B26C00548FE2 /* ACMapNodeMountain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapNodeMountain.m; path = "Arc Core/ACMapNodeMountain.m"; sourceTree = "<group>"; };
+		86228FC21B52F6AA00548FE2 /* ACMapLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACMapLine.h; path = "Arc Core/ACMapLine.h"; sourceTree = "<group>"; };
+		86228FC31B52F6AA00548FE2 /* ACMapLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACMapLine.m; path = "Arc Core/ACMapLine.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86228F731B51EC1B00548FE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86228F6D1B51EC1B00548FE2 = {
+			isa = PBXGroup;
+			children = (
+				86228F781B51EC1B00548FE2 /* Arc Console */,
+				86228F771B51EC1B00548FE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86228F771B51EC1B00548FE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86228F761B51EC1B00548FE2 /* Arc Core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86228F781B51EC1B00548FE2 /* Arc Console */ = {
+			isa = PBXGroup;
+			children = (
+				86228F791B51EC1B00548FE2 /* main.m */,
+				86228F801B5211E000548FE2 /* ACConsole.h */,
+				86228F811B5211E000548FE2 /* ACConsole.m */,
+				86228F861B52155700548FE2 /* ACConsoleData.h */,
+				86228F871B52155700548FE2 /* ACConsoleData.m */,
+				86228F831B52149D00548FE2 /* ACConsoleInterface.h */,
+				86228F841B52149D00548FE2 /* ACConsoleInterface.m */,
+				86228F8C1B521E4B00548FE2 /* Arc Core */,
+			);
+			name = "Arc Console";
+			path = "Arc Core";
+			sourceTree = "<group>";
+		};
+		86228F8C1B521E4B00548FE2 /* Arc Core */ = {
+			isa = PBXGroup;
+			children = (
+				86228F8D1B521F4C00548FE2 /* ACArc.h */,
+				86228F8E1B521F4C00548FE2 /* ACArc.m */,
+				86228F931B52232300548FE2 /* ACArcDelta.h */,
+				86228F941B52232300548FE2 /* ACArcDelta.m */,
+				86228F9E1B5234FE00548FE2 /* State */,
+				86228F9A1B52274F00548FE2 /* Interface */,
+				86228F991B52269A00548FE2 /* Map */,
+			);
+			name = "Arc Core";
+			sourceTree = "<group>";
+		};
+		86228F991B52269A00548FE2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				86228F901B52214B00548FE2 /* ACMap.h */,
+				86228F911B52214B00548FE2 /* ACMap.m */,
+				86228FC21B52F6AA00548FE2 /* ACMapLine.h */,
+				86228FC31B52F6AA00548FE2 /* ACMapLine.m */,
+				86228F961B5224D300548FE2 /* ACMapNode.h */,
+				86228F971B5224D300548FE2 /* ACMapNode.m */,
+				86228F9B1B52282700548FE2 /* ACMapNodeComponent.h */,
+				86228F9C1B52282700548FE2 /* ACMapNodeComponent.m */,
+				86228FA21B523D9D00548FE2 /* Nodes */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		86228F9A1B52274F00548FE2 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				86228F891B521E4800548FE2 /* ACInterface.h */,
+				86228F8A1B521E4800548FE2 /* ACInterface.m */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		86228F9E1B5234FE00548FE2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				86228F9F1B52350900548FE2 /* ACState.h */,
+				86228FA01B52350900548FE2 /* ACState.m */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		86228FA21B523D9D00548FE2 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				86228FA61B523DD800548FE2 /* Nature */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		86228FA61B523DD800548FE2 /* Nature */ = {
+			isa = PBXGroup;
+			children = (
+				86228FB61B52434C00548FE2 /* ACMapNodeGrasslands.h */,
+				86228FB71B52434C00548FE2 /* ACMapNodeGrasslands.m */,
+				86228FB91B52442600548FE2 /* ACMapNodeForest.h */,
+				86228FBA1B52442600548FE2 /* ACMapNodeForest.m */,
+				86228FBC1B52AB8500548FE2 /* ACMapNodeRiver.h */,
+				86228FBD1B52AB8500548FE2 /* ACMapNodeRiver.m */,
+				86228FBF1B52B26C00548FE2 /* ACMapNodeMountain.h */,
+				86228FC01B52B26C00548FE2 /* ACMapNodeMountain.m */,
+			);
+			name = Nature;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86228F751B51EC1B00548FE2 /* Arc Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86228F7D1B51EC1B00548FE2 /* Build configuration list for PBXNativeTarget "Arc Core" */;
+			buildPhases = (
+				86228F721B51EC1B00548FE2 /* Sources */,
+				86228F731B51EC1B00548FE2 /* Frameworks */,
+				86228F741B51EC1B00548FE2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Arc Core";
+			productName = "Arc Core";
+			productReference = 86228F761B51EC1B00548FE2 /* Arc Core */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86228F6E1B51EC1B00548FE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Izuchukwu Elechi";
+				TargetAttributes = {
+					86228F751B51EC1B00548FE2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 86228F711B51EC1B00548FE2 /* Build configuration list for PBXProject "Arc Core" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 86228F6D1B51EC1B00548FE2;
+			productRefGroup = 86228F771B51EC1B00548FE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86228F751B51EC1B00548FE2 /* Arc Core */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86228F721B51EC1B00548FE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86228FC41B52F6AA00548FE2 /* ACMapLine.m in Sources */,
+				86228FC11B52B26C00548FE2 /* ACMapNodeMountain.m in Sources */,
+				86228FBB1B52442600548FE2 /* ACMapNodeForest.m in Sources */,
+				86228F981B5224D300548FE2 /* ACMapNode.m in Sources */,
+				86228FB81B52434C00548FE2 /* ACMapNodeGrasslands.m in Sources */,
+				86228FA11B52350900548FE2 /* ACState.m in Sources */,
+				86228F9D1B52282700548FE2 /* ACMapNodeComponent.m in Sources */,
+				86228F7A1B51EC1B00548FE2 /* main.m in Sources */,
+				86228FBE1B52AB8500548FE2 /* ACMapNodeRiver.m in Sources */,
+				86228F821B5211E000548FE2 /* ACConsole.m in Sources */,
+				86228F951B52232300548FE2 /* ACArcDelta.m in Sources */,
+				86228F851B52149D00548FE2 /* ACConsoleInterface.m in Sources */,
+				86228F8B1B521E4800548FE2 /* ACInterface.m in Sources */,
+				86228F921B52214B00548FE2 /* ACMap.m in Sources */,
+				86228F881B52155700548FE2 /* ACConsoleData.m in Sources */,
+				86228F8F1B521F4C00548FE2 /* ACArc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		86228F7B1B51EC1B00548FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		86228F7C1B51EC1B00548FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		86228F7E1B51EC1B00548FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		86228F7F1B51EC1B00548FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86228F711B51EC1B00548FE2 /* Build configuration list for PBXProject "Arc Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86228F7B1B51EC1B00548FE2 /* Debug */,
+				86228F7C1B51EC1B00548FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86228F7D1B51EC1B00548FE2 /* Build configuration list for PBXNativeTarget "Arc Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86228F7E1B51EC1B00548FE2 /* Debug */,
+				86228F7F1B51EC1B00548FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86228F6E1B51EC1B00548FE2 /* Project object */;
+}
