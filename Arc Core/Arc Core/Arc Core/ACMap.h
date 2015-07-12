@@ -12,14 +12,16 @@
 #import "ACState.h"
 #import "ACMapNode.h"
 
-#define m(x, y) CGPointMake(x, y)
+#define m(x, y) CGPointMake(x, y) //make
+#define k(point) NSStringFromPoint(NSPointFromCGPoint(point)) //key
+#define p(pointKey) NSPointToCGPoint(NSPointFromString(pointKey)) //point
+#define uv(vector) m(vector.dx, vector.dy) //unvector
+#define tv(point) CGVectorMake(point.x, point.y) //tovector
 
 #define ww 48
 #define hh 12
 
 @protocol ACMapDelegate <NSObject>
-
-- (void)mapDidCompleteGen;
 
 @end
 
@@ -31,10 +33,6 @@
 @property (nonatomic, weak) id<ACMapDelegate> delegate;
 
 - (instancetype)initWithName:(NSString *)name;
-- (void)genesis;
-- (void)postGenesisForPlayerState:(ACState *)state;
-
-- (ACMapNode *)nodeAtPoint:(CGPoint)point;
-- (CGPoint)pointForNode:(ACMapNode *)node;
+- (void)genesisWithState:(ACState *)state;
 
 @end

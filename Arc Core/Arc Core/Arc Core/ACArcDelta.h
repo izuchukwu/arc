@@ -28,5 +28,6 @@ typedef NS_ENUM(NSInteger, ACArcDeltaMapNodeTransformation){
 @property (nonatomic, assign) ACArcDeltaMapNodeTransformation transformation;
 
 @property (nonatomic, strong) ACState *state;
+@property (nonatomic, strong) NSString *status;
 
 @end

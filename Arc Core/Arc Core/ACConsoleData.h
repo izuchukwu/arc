@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *map;
-@property (nonatomic, copy) NSArray *status;
+@property (nonatomic, copy) NSString *status;
 
 @property (nonatomic, assign) BOOL shouldRead;
 

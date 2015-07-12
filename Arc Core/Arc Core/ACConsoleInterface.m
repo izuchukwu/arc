@@ -16,8 +16,8 @@
 @property (nonatomic, strong) ACArc *arc;
 @property (nonatomic, strong) ACInterface *interface;
 
-@property (nonatomic, assign) CGPoint selectedPoint;
-@property (nonatomic, assign) BOOL noPointSelected;
+@property (nonatomic, assign) ACMapNode *selectedNode;
+@property (nonatomic, assign) BOOL noSelection;
 
 @end
 
@@ -35,7 +35,7 @@
     
     NSString *groundName = [ACConsole inputForConsoleData:groundCData openEnded:YES];
     
-    self.noPointSelected = YES;
+    self.noSelection = YES;
     
     self.arc = [[ACArc alloc] initWithName:groundName interfaceDelegate:self];
     self.interface = self.arc.interface;
@@ -45,43 +45,76 @@
 
 - (void)arcDidUpdateWithDelta:(ACArcDelta *)arcDelta {
     if ([arcDelta transformation] == ACArcDeltaMapNodeTransformationGen) {
-        if (self.noPointSelected) {
-            self.selectedPoint = [arcDelta.map pointForNode:[arcDelta.state nodes][0]];
+        if (self.noSelection) {
+            self.selectedNode = [arcDelta.state origin];
         }
         
         ACConsoleData *genCData = [[ACConsoleData alloc] init];
         [genCData setTitle:@"Your world awaits."];
-        [genCData setMap:[self printMap:arcDelta.map scoped:YES]];
+        [genCData setMap:[self printState:arcDelta.state]];
+        [genCData setStatus:[NSString stringWithFormat:@"%@%@", arcDelta.node.status, (arcDelta.status ? [NSString stringWithFormat:@"\n\n%@", arcDelta.status] : @"")]];
         [ACConsole inputForConsoleData:genCData openEnded:YES];
     }
 }
 
 #pragma mark - Map I/O
 
-- (NSString *)printMap:(ACMap *)map scoped:(BOOL)scoped {
+- (NSString *)printState:(ACState *)state {
     NSString *mapStr = @"";
+    NSMutableDictionary *nodes = [[NSMutableDictionary alloc] init];
     
-    for (int x = 0; x < map.width; x++) {
+    nodes[k(uv(state.origin.vector))] = state.origin;
+    [self traverseLineFromNode:state.origin toMap:nodes fromWorkingPoint:uv(state.origin.vector)];
+    
+    int minx = 0, miny = 0, maxx = 0, maxy = 0;
+    int w = 0, h = 0;
+    
+    for (NSString *ptstr in nodes) {
+        CGPoint pt = p(ptstr);
+        if (minx > pt.x) minx = pt.x;
+        if (miny > pt.y) miny = pt.y;
+        if (maxx < pt.x) maxx = pt.x;
+        if (maxy < pt.x) maxy = pt.y;
+    }
+    
+    w = maxx - minx;
+    h = maxy - miny;
+    
+    for (int x = minx; x < w; x++) {
         mapStr = [mapStr stringByAppendingString:@"-"];
     }
     mapStr = [mapStr stringByAppendingString:@"\n"];
     
-    for (int y = 0; y < map.height; y++) {
-        for (int x = 0; x < map.width; x++) {
-            if (!CGPointEqualToPoint(self.selectedPoint, m(x,y))) {
-                mapStr = [mapStr stringByAppendingString:[[map nodeAtPoint:m(x, y)] nodeChar]];
+    for (int y = miny; y < h; y++) {
+        for (int x = minx; x < w; x++) {
+            NSString *hereKey = k(m(x,y));
+            
+            if (nodes[hereKey]) {
+                if (nodes[hereKey] == self.selectedNode) {
+                    mapStr = [mapStr stringByAppendingString:@"x"];
+                } else {
+                    mapStr = [mapStr stringByAppendingString:[nodes[hereKey] nodeChar]];
+                }
             } else {
-                mapStr = [mapStr stringByAppendingString:@"x"];
+                mapStr = [mapStr stringByAppendingString:@" "];
             }
         }
         mapStr = [mapStr stringByAppendingString:@"\n"];
     }
     
-    for (int x = 0; x < map.width; x++) {
+    for (int x = minx; x < w; x++) {
         mapStr = [mapStr stringByAppendingString:@"-"];
     }
     
     return mapStr;
+}
+
+- (void)traverseLineFromNode:(ACMapNode *)workingNode toMap:(NSMutableDictionary *)nodes fromWorkingPoint:(CGPoint)workingPoint {
+    for (ACMapNode *node in [workingNode connectedNodes]) {
+        CGPoint loc = m(workingPoint.x + node.vector.dx, workingPoint.y + node.vector.dy);
+        nodes[k(loc)] = node;
+        [self traverseLineFromNode:node toMap:nodes fromWorkingPoint:loc];
+    }
 }
 
 @end

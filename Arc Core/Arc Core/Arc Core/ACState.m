@@ -14,8 +14,6 @@
     self = [super init];
     if (self) {
         _name = name;
-        
-        self.nodes = [[NSMutableArray alloc] init];
     }
     return self;
 }

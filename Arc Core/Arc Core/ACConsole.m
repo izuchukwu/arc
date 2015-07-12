@@ -37,9 +37,7 @@
     }
     
     if ([consoleData status]) {
-        for (NSString *status in [consoleData status]) {
-            [self write:status];
-        }
+        [self write:[consoleData status]];
         [self write:@""];
     }
     

@@ -8,6 +8,12 @@
 
 #import "ACMapNodeForest.h"
 
+@interface ACMapNodeForest ()
+
+@property (nonatomic, strong) NSString *status;
+
+@end
+
 @implementation ACMapNodeForest
 
 - (NSString *)nodeTitle {
@@ -16,6 +22,10 @@
 
 - (NSString *)nodeChar {
     return @"f";
+}
+
+- (NSString *)status {
+    return [NSString stringWithFormat:@"%@%@%@", self.nodeTitle, (_status ? [NSString stringWithFormat:@"\n%@", _status] : @""), (self.state ? [NSString stringWithFormat:@"\n%@", self.state.name] : @"Free Territory")];
 }
 
 @end

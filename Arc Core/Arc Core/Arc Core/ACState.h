@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ACMapNode.h"
+
+@class ACMapNode;
+
 @interface ACState : NSObject
 
 @property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, strong) NSMutableArray *nodes;
+@property (nonatomic, strong) ACMapNode *origin;
 
 - (instancetype)initWithName:(NSString *)name;
-- (NSArray *)scopedPoints;
 
 // For Map Use
 

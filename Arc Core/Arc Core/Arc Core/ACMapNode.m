@@ -10,16 +10,19 @@
 
 @interface ACMapNode ()
 
-@property (nonatomic, copy) NSMutableArray *components;
+@property (nonatomic, strong) NSMutableArray *components;
+@property (nonatomic, strong) NSString *status;
 
 @end
 
 @implementation ACMapNode
 
-- (instancetype)initWithComponents:(NSArray *)components {
+- (instancetype)init{
     self = [super init];
     if (self) {
-        self.components = [NSMutableArray arrayWithArray:components];
+        self.components = [[NSMutableArray alloc] init];
+        self.connectedNodes = [[NSMutableArray alloc] init];
+        self.lines = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -37,7 +40,7 @@
 }
 
 - (NSString *)status {
-    return nil;
+    return [NSString stringWithFormat:@"%@%@%@", self.nodeTitle, (_status ? [NSString stringWithFormat:@"\n%@", _status] : @""), (self.state ? [NSString stringWithFormat:@"\n%@", self.state.name] : @"Free Territory")];
 }
 
 @end

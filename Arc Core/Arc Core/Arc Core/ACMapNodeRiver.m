@@ -8,6 +8,12 @@
 
 #import "ACMapNodeRiver.h"
 
+@interface ACMapNodeRiver ()
+
+@property (nonatomic, strong) NSString *status;
+
+@end
+
 @implementation ACMapNodeRiver
 
 - (NSString *)nodeTitle {
@@ -16,6 +22,10 @@
 
 - (NSString *)nodeChar {
     return @" ";
+}
+
+- (NSString *)status {
+    return [NSString stringWithFormat:@"%@%@%@", self.nodeTitle, (_status ? [NSString stringWithFormat:@"\n%@", _status] : @""), (self.state ? [NSString stringWithFormat:@"\n%@", self.state.name] : @"Free Territory")];
 }
 
 @end

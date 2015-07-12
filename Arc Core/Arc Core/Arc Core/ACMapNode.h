@@ -11,11 +11,15 @@
 #import "ACMapNodeComponent.h"
 #import "ACState.h"
 
+@class ACState;
+
 @interface ACMapNode : NSObject
 
 @property (nonatomic, weak) ACState *state;
+@property (nonatomic, assign) CGVector vector;
+@property (nonatomic, strong) NSMutableArray *connectedNodes;
+@property (nonatomic, strong) NSMutableArray *lines;
 
-- (instancetype)initWithComponents:(NSArray *)components;
 - (void)addComponent:(id<ACMapNodeComponent>)component;
      
 - (NSString *)nodeTitle;

@@ -10,14 +10,12 @@
 
 @interface ACMapLine : NSObject
 
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, strong) NSMutableArray *points; //points on its path
-@property (nonatomic, assign) CGPoint available;
-
-// For Map Use
-
 @property (nonatomic, assign) CGVector vector;
-@property (nonatomic, assign) CGVector turnVectorIndex;
-@property (nonatomic, assign) CGVector turnTendency;
+@property (nonatomic, assign) int turnVectorIndex;
+@property (nonatomic, assign) int turnTendency;
+
+@property (nonatomic, assign) CGPoint nextPoint;
+
++ (NSArray *)turnVectors;
 
 @end

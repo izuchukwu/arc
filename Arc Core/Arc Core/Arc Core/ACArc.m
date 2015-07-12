@@ -29,23 +29,19 @@
         
         self.map = [[ACMap alloc] initWithName:name];
         [self.map setDelegate:self];
-        [self.map genesis];
+        for (ACState *state in self.states) {
+            [self.map genesisWithState:state];
+        }
+        
+        ACState *playerState = self.states[0];
+        ACArcDelta *delta = [[ACArcDelta alloc] init];
+        [delta setMap:self.map];
+        [delta setTransformation:ACArcDeltaMapNodeTransformationGen];
+        [delta setState:playerState];
+        [delta setNode:playerState.origin];
+        [self.interface arcDidUpdateWithDelta:delta];
     }
     return self;
-}
-
-#pragma mark - Map Delegate
-
-- (void)mapDidCompleteGen {
-    ACState *playerState = self.states[0];
-    [self.map postGenesisForPlayerState:playerState];
-    
-    ACArcDelta *delta = [[ACArcDelta alloc] init];
-    [delta setMap:self.map];
-    [delta setTransformation:ACArcDeltaMapNodeTransformationGen];
-    [delta setState:playerState];
-    [delta setNode:playerState.nodes[0]];
-    [self.interface arcDidUpdateWithDelta:delta];
 }
 
 @end
